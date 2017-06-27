@@ -1,0 +1,64 @@
+<!DOCTYPE  html>
+ <html>
+  <head>
+   <meta charset="utf-8">
+   <title>dropdown</title>
+                                                                    <!--styling dropdown button and setting position for parent and child-->  
+	<style> 
+    .dropbtn {                                                              
+    background-color: green;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    }
+
+.parent {                                                                 
+    position: relative;
+    display: inline-block;
+    }
+
+.child {                                                                   
+    display: none;
+    position: absolute;
+    background-color: red;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+.child a {                                                                 <!--styling the link in child-->
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    }
+
+.child a:hover {background-color: blue}
+
+.parent:hover .child {
+    display: block;
+     } 
+
+.parent:hover .dropbtn {
+    background-color: yellow;
+    }
+ </style>
+ </head>
+ <body>
+
+  <h1>Dropdown Menu</h1>
+
+
+  <div class="parent">                                                   <!---content in the child-->
+  <button class="dropbtn">Logs List >> </button>
+  <div class="child">
+     <a href="#">dialled calls</a>
+     <a href="#">recieved calls</a>
+     <a href="#">missed calls</a>
+	 <a href="#">rejected calls</a>
+  </div>
+</div>
+</body>
+<html>
